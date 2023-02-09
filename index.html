@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Esta etiqueta meta sirve para que Google de mejor puntuación a nuestro sitio -->
+    <meta name="description" content="Coffee blog website">
+
+    <title>Coffee Blog</title>
+
+    <!-- Normalize, fonts and styles -->
+    
+    <!-- PRELOAD -->
+    <!-- Preload carga inmediatamente los elementos que se requieran desde el inicio -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- PREFETCH -->
+    <!-- Carga el elemento que creamos que el usuario va a requerir a continuación -->
+    <link rel="prefetch" href="about_us.html" as="document">
+</head>
+<body>
+
+    <header class="header">
+
+        <div class="container">
+            <div class="bar">
+
+                <a class="logo" href="index.html">
+                    <h1 class="logo__name no-margin text-center">Coffee<span>Blog</span></h1>
+                </a>
+
+                <nav class="nav">
+                    <a href="about_us.html" class="nav__link">About us</a>
+                    <a href="courses.html" class="nav__link">Courses</a>
+                    <a href="contact.html" class="nav__link">Contact</a>
+                </nav>
+
+            </div>
+        </div>
+
+        <div class="header__text">
+            <h2 class="no-margin">Coffee blog with advice and courses</h2>
+            <p class="no-margin">Learn from experts with the best recipes and advice</p>
+        </div>
+
+    </header>
+
+    <div class="main-content container">
+
+        <main class="blog">
+
+            <h3>Our Blog</h3>
+
+            <article class="post">
+                <div class="post__img">
+                    <!-- Primero intenta cargar blog1.webp (que es más ligera) y si el navegador no tiene soporte para webp, carga blog1.jpg -->
+                    <picture>
+                        <!-- Loading lazy hace que los elementos se descarguen hasta que sean visibles, por lo que la página cargará más rápido al inicio -->
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+                        <img loading="lazy" class="round-corners" src="img/blog1.jpg" alt="Blog Image">
+                    </picture>
+                </div>
+
+                <div class="post__content">
+                    <h4 class="no-margin">Types of Coffee Beans</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo officia esse commodi incidunt et id ducimus molestias quod fugit quaerat consectetur provident aut delectus facere rem tenetur, animi aliquid maiores.</p>
+
+                    <a href="post.html" class="button button--main">Read Post</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post__img">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+                        <img loading="lazy" class="round-corners" src="img/blog2.jpg" alt="Blog Image">
+                    </picture>
+                </div>
+
+                <div class="post__content">
+                    <h4 class="no-margin">Three Delicious Coffee Recipes</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero nemo obcaecati, vitae eaque, quibusdam quis deserunt rem dolor molestias sed facere. Provident corporis eligendi voluptate sapiente, deserunt at id omnis.</p>
+
+                    <a href="post.html" class="button button--main">Read Post</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post__img">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                        <img loading="lazy" class="round-corners" src="img/blog3.jpg" alt="Blog Image">
+                    </picture>
+                </div>
+
+                <div class="post__content">
+                    <h4 class="no-margin">Coffee Benefits</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iste alias illum! Quam omnis enim molestiae illo neque, rem ad dolorum, at voluptatum architecto, minima magni et vero quisquam? Quas.</p>
+
+                    <a href="post.html" class="button button--main">Read Post</a>
+                </div>
+            </article>
+
+        </main>
+
+        <aside class="sidebar">
+
+            <h3>Our Courses and Conferences</h3>
+
+            <ul class="courses no-padding">
+                <li class="widget-course">
+                    <h4 class="no-margin">Coffee Extraction Techniques</h4>
+                    <p>Price: <span>Free</span></p>
+                    <p>Availability: <span>20</span></p>
+                    <!-- El nombre es tan largo porque Google penaliza si solo ponemos "Mas Información". Tiene que ser más descriptivo -->
+                    <a href="courses.html" class="button button--second">More information about courses</a>
+                </li>
+
+                <li class="widget-course">
+                    <h4 class="no-margin">Roasting and Grinding Coffee Beans</h4>
+                    <p>Price: <span>Free</span></p>
+                    <p>Availability: <span>20</span></p>
+                    <a href="courses.html" class="button button--second">More information about courses</a>
+                </li>
+
+                <li class="widget-course">
+                    <h4 class="no-margin">4 Coffee Recipes For Beginners</h4>
+                    <p>Price: <span>Free</span></p>
+                    <p>Availability: <span>20</span></p>
+                    <a href="courses.html" class="button button--second">More information about courses</a>
+                </li>
+            </ul>
+
+        </aside>
+
+    </div>
+
+    <footer class="footer">
+        <div class="bar container">
+
+            <a class="logo" href="index.html">
+                <h1 class="logo__name no-margin text-center">Coffee<span>Blog</span></h1>
+            </a>
+
+            <nav class="nav">
+                <a href="about_us.html" class="nav__link">About us</a>
+                <a href="courses.html" class="nav__link">Courses</a>
+                <a href="contact.html" class="nav__link">Contact</a>
+            </nav>
+
+        </div>
+    </footer>
+
+    <!-- Modernizr (https://modernizr.com/) permite detectar si un navegador soporta tal o cual cosa.
+    Por ejemplo aquí, si soporta webp, modernizr añade la clase webp al html. Si no, añade no-webp. Con esto, podemos cargar blog1.webp en .webp img {} y blog1.jpg en .no-webp img {} -->
+    <script src="js/modernizr.js"></script>
+</body>
+</html>

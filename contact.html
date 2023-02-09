@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Blog</title>
+
+    <!-- Normalize, fonts and styles -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="bar">
+          <a class="logo" href="index.html">
+            <h1 class="logo__name no-margin text-center">
+              Coffee<span>Blog</span>
+            </h1>
+          </a>
+
+          <nav class="nav">
+            <a href="about_us.html" class="nav__link">About us</a>
+            <a href="courses.html" class="nav__link">Courses</a>
+            <a href="contact.html" class="nav__link">Contact</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header__text">
+        <h2 class="no-margin">Coffee blog with advice and courses</h2>
+        <p class="no-margin">
+          Learn from experts with the best recipes and advice
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <h3 class="text-center">Contact</h3>
+
+      <div class="contact-bg round-corners"></div>
+
+      <form class="form round-corners">
+        <div class="field">
+          <!-- For sirve para que al presionar el label, se haga focus en el input que le corresponda -->
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Your email" />
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea name="message" id="message"></textarea>
+        </div>
+
+        <div class="field">
+            <input type="submit" class="button button--main button--contact" value="Send">
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="bar container">
+        <a class="logo" href="index.html">
+          <h1 class="logo__name no-margin text-center">
+            Coffee<span>Blog</span>
+          </h1>
+        </a>
+
+        <nav class="nav">
+          <a href="about_us.html" class="nav__link">About us</a>
+          <a href="courses.html" class="nav__link">Courses</a>
+          <a href="contact.html" class="nav__link">Contact</a>
+        </nav>
+      </div>
+    </footer>
+    
+    <script src="js/modernizr.js"></script>
+  </body>
+</html>
