@@ -61,8 +61,34 @@ const btnSend = document.querySelector(".button--main")
 btnSend.addEventListener("click", (e) => {
     // e references the event, it has several properties and methods
     console.log(e)
-    // preventDefault prevents page from reloading, this is useful to validate date before send it, for example
+    // preventDefault prevents page from reloading, this is useful for validating data before send it, for example
     e.preventDefault()
     console.log("Sending form")
 })
+*/
+
+// Keyboard events
+/* <--- CODE
+const user = {
+    name: "",
+    email: "",
+    message: ""
+}
+
+// This method takes an argument, which is the event object
+const readInput = (e) => {
+    // Target references the input that´s triggering the event
+    user[e.target.id] = e.target.value
+    console.log(user)
+}
+
+const name = document.querySelector("#name")
+const email = document.querySelector("#email")
+const message = document.querySelector("#message")
+
+// "input" event is called whenever we type the keyboard
+// "change" event is called when an input is unfocused
+name.addEventListener("input", readInput)
+email.addEventListener("input", readInput)
+message.addEventListener("input", readInput)
 */
