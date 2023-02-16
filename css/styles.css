@@ -320,7 +320,7 @@ img {
   flex: 1;
   border: 1px solid var(--gray);
   border-radius: 1rem;
-  /*padding-left: 1rem;*/
+  padding-left: 1rem;
 }
 
 .button--contact:hover {
@@ -336,4 +336,19 @@ img {
     flex: 0 0 3rem;
     text-align: left;
   }
+}
+
+/* Showing a message (sent or error) */
+.msg {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.sent {
+  background-color: rgb(74, 185, 0);
+}
+
+.error {
+  background-color: rgb(185, 0, 0);
 }

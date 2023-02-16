@@ -68,7 +68,7 @@ btnSend.addEventListener("click", (e) => {
 */
 
 // Keyboard events
-/* <--- CODE
+// <--- CODE
 const user = {
     name: "",
     email: "",
@@ -79,7 +79,7 @@ const user = {
 const readInput = (e) => {
     // Target references the input that´s triggering the event
     user[e.target.id] = e.target.value
-    console.log(user)
+    //console.log(user)
 }
 
 const name = document.querySelector("#name")
@@ -91,4 +91,38 @@ const message = document.querySelector("#message")
 name.addEventListener("input", readInput)
 email.addEventListener("input", readInput)
 message.addEventListener("input", readInput)
-*/
+// <--- CODE
+
+// Submit event
+const form = document.querySelector(".form")
+
+const showMessage = (message, band) => {
+
+    const msg = document.createElement("p")
+    msg.textContent = message
+    msg.classList.add("msg")
+
+    if (band) {
+        msg.classList.add("sent")
+    } else {
+        msg.classList.add("error")
+    }
+
+    form.appendChild(msg)
+    setTimeout(() => {
+        msg.remove()
+    }, 3000);
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+
+    // Destructuring user into three variables
+    const { name, email, message } = user
+
+    if (name === "" || email === "" || message === "") {
+        showMessage("All fields must be filled", false)
+        return
+    }
+    showMessage("Message sent!", true)
+})
