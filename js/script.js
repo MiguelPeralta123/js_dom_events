@@ -96,16 +96,16 @@ message.addEventListener("input", readInput)
 // Submit event
 const form = document.querySelector(".form")
 
-const showMessage = (message, band) => {
+const showMessage = (message, error=false) => {
 
     const msg = document.createElement("p")
     msg.textContent = message
     msg.classList.add("msg")
 
-    if (band) {
-        msg.classList.add("sent")
-    } else {
+    if (error) {
         msg.classList.add("error")
+    } else {
+        msg.classList.add("sent")
     }
 
     form.appendChild(msg)
@@ -121,8 +121,8 @@ form.addEventListener("submit", (e) => {
     const { name, email, message } = user
 
     if (name === "" || email === "" || message === "") {
-        showMessage("All fields must be filled", false)
+        showMessage("All fields must be filled", true)
         return
     }
-    showMessage("Message sent!", true)
+    showMessage("Message sent!")
 })

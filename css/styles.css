@@ -343,6 +343,8 @@ img {
   padding: 0.5rem;
   border-radius: 1rem;
   text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
 }
 
 .sent {
